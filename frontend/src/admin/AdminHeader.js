@@ -6,10 +6,9 @@ import './AdminHeader.css';
 const AdminHeader = () => {
   return (
     <nav className="admin-nav">
-      <p>The menu will be here.</p>
-
       <Link to="/admin">Home</Link>
       <Link to="/admin/categories">Categories</Link>
+      <Link to="/admin/products">Products</Link>
     </nav>
   )
 };
