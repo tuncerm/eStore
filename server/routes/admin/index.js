@@ -2,12 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-// const adminRoutes = require('./admin');
-// const storeRoutes = require('./store');
+const categoryRoutes = require('./category');
 
-// router.use('/admin', adminRoutes);
-
-// router.use('/store', storeRoutes);
+router.use('/category', categoryRoutes);
 
 router.get('/', (req, res)=>{
     res.send("Hello");
