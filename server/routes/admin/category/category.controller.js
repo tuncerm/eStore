@@ -1,5 +1,6 @@
 const {validationResult} = require('express-validator');
 const Category = require('../../../models/category');
+const Product = require('../../../models/product');
 
 const getCategories = async (req, res)=>{
     const placeId = req.params.pid;
@@ -20,13 +21,6 @@ const newCategory = async (req, res)=>{
         return next(new HttpError('Invalid inputs detected.', 422));
     }
 
-    // req.body
-    // {
-    //     "name":"Jamy",
-    //     "details":"J-a-m-y",
-    //     "image":"smt.png"
-    // }
-    
     let category;
     try{
         category = await Category.create(req.body); 
@@ -35,5 +29,9 @@ const newCategory = async (req, res)=>{
     }
     res.json({category});
 };
+
+const updateCategory = async (req, res) => {};
+
+const deleteCategory = async (req, res) => {};
 
 module.exports = { getCategories, newCategory };
