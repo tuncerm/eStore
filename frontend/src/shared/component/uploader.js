@@ -19,13 +19,13 @@ const Uploader = ({fileFilter, isCentered, onUploadDone, allowMulti}) => {
     };
 
     const upload = async ()=>{
-        // try{
-        //     const formData = new FormData();
-        //     for (const file of files) {
-        //         formData.append('file', file);
-        //     }
-        //     await sendRequest(`${process.env.REACT_APP_API_URL}/files${multiMode ? '/multi' : ''}`, 'POST', formData, {Authorization: 'Bearer ' + auth.token});
-        // } catch {}
+        try{
+            const formData = new FormData();
+            for (const file of files) {
+                formData.append('file', file);
+            }
+            await sendRequest(`${process.env.REACT_APP_API_URL}/files${multiMode ? '/multi' : ''}`, 'POST', formData, {Authorization: 'Bearer ' + auth.token});
+        } catch {}
         onUploadDone(files);
     };
 
