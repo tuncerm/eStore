@@ -33,7 +33,7 @@ const AdminCategories = () => {
         isValid: false
       },
       image: {
-        value: null,
+        value: '',
         isValid: false
       }
     },
@@ -70,13 +70,13 @@ const AdminCategories = () => {
     <div className="admin-categories">
       <p>The Categories</p>
       <form className="admin-categories-new" onSubmit={createCategory}>
-        <input name="name" type="text" placeholder="Title"/>
-        <input name="details" type="text" placeholder="Description"/>
-        <input name="image" type="file"/>
+        <input name="name" onInput={inputHandler} type="text" placeholder="Title"/>
+        <input name="details" onInput={inputHandler} type="text" placeholder="Description"/>
+        <input name="image" type="text" placeholder="Upload an image" disabled/>
         <input type="submit" value="Save"/>
       </form>
 
-      <Uploader fileFilter=".jpg,.png,.jpeg" onUploadDone={(vals)=>{console.log(vals)}} allowMulti/>
+      <Uploader fileFilter=".jpg,.png,.jpeg" onUploadDone={vals=>{inputHandler('image', vals[0], true)}}  />
 
       <Table
         isStriped
