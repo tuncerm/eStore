@@ -33,14 +33,25 @@
 }
 
 .btn-danger {
-  background: #830000;
-  border-color: #830000;
+  background: #f1400a;
+  border-color: #f1400a;
 }
 
 .btn-danger:hover,
 .btn-danger:active {
-  background: #f34343;
-  border-color: #f34343;
+  background: #f38443;
+  border-color: #f38443;
+}
+
+.btn-warning {
+  background: #f33939;
+  border-color: #f33939;
+}
+
+.btn-warning:hover,
+.btn-warning:active {
+  background: #f37543;
+  border-color: #f37543;
 }
 
 .btn:disabled,

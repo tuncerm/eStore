@@ -4,7 +4,7 @@ import './Table.css';
 
 const Table = ({header, rows, isStriped, isDark}) => {
   return (
-    <table className={`${isStriped && 'table-striped'} ${isDark && 'table-dark'}`}>
+    <table className={`table ${isStriped && 'table-striped'} ${isDark && 'table-dark'}`}>
       {header}
       <tbody>
         {rows}

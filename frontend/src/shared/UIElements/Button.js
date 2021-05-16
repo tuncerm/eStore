@@ -2,10 +2,10 @@ import React from 'react';
 
 import './Button.css';
 
-const Button = ({children, size, inverse, danger, type = "button", onClick, disabled}) => {
+const Button = ({children, size='md', mode='primary', inverse, type = "button", onClick, disabled}) => {
   return (
-    <button className={`btn btn-${size || 'md'} ${inverse &&
-        'btn-inverse'} ${danger && 'btn-danger'}`}
+    <button 
+      className={`btn btn-${size} btn-${mode} ${inverse && 'btn-inverse'}`}
       type={type}
       onClick={onClick}
       disabled={disabled}

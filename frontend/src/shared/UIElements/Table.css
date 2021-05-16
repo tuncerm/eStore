@@ -1,3 +1,12 @@
+.table{
+  width: 100%;
+}
+
+.table thead{
+  color: black;
+  background-color: burlywood;
+}
+
 .table-dark {
   color: red;
   border: 1px solid black;
@@ -7,6 +16,14 @@
   background-color: gray;
 }
 
+.table-striped thead tr:nth-child(odd) {
+  background-color: gray;
+}
+
 .table-striped tbody tr:nth-child(even) {
+  background-color: orange;
+}
+
+.table-striped thead tr:nth-child(even) {
   background-color: orange;
 }
